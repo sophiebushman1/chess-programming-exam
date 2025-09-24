@@ -7,8 +7,19 @@ package chess;
  * signature of the existing methods.
  */
 public class ChessPosition {
+    private final int row;
+    private final int column;
 
     public ChessPosition(int row, int col) {
+    //check if argument is good
+        if (row>8 || row<1){
+            throw new IllegalArgumentException("row value must be between 1 and 8");
+        }
+        if (col>8 || col<1){
+            throw new IllegalArgumentException("column value must be between 1 and 8");
+        }
+        this.row = row;
+        this.column = col;
     }
 
     /**
@@ -16,7 +27,7 @@ public class ChessPosition {
      * 1 codes for the bottom row
      */
     public int getRow() {
-        throw new RuntimeException("Not implemented");
+        return row;
     }
 
     /**
@@ -24,6 +35,6 @@ public class ChessPosition {
      * 1 codes for the left row
      */
     public int getColumn() {
-        throw new RuntimeException("Not implemented");
+        return column;
     }
 }

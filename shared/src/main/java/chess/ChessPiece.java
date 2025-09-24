@@ -47,6 +47,13 @@ public class ChessPiece {
      * @return Collection of valid moves
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
-        throw new RuntimeException("Not implemented");
+
     }
 }
+
+//helper functions: isenemy, isempty, isinbounds, addoffsetmove, addpawnmove, addslidingmove,
+//pawn: onestep(inbounds and empty? add move promote?)
+// pawn: twostep(starting row and empty target? add move)
+//pawn: capture: if enemy, add move
+//sliding function: nr += v[0], nc += v[1] outside of loops
+//make list, get position first in pieceMoves? inside goes PieceType switches case PAWN ->{}
