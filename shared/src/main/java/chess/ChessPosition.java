@@ -1,4 +1,5 @@
 package chess;
+import java.util.*;
 
 /**
  * Represents a single square position on a chess board
